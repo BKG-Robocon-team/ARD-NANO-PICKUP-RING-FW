@@ -1,5 +1,5 @@
 /*
- * File: configs.h
+ * File: common.h
  * Authors: Hocj2me <lctuyenvn@gmail.com>
  * Create: 00:20 08/04/2023
  *
@@ -28,19 +28,23 @@
 //========================== DEFINE FOR STEPPER ========================
 
 // Motor steps per revolution. Most steppers are 200 steps or 1.8 degrees/step
-#define MOTOR_NUMBER_STEPS 200
-#define MOTOR_SPEED_RPM 2000
+#define STEPPER_MOTOR_NUMBER_STEPS 200
+#define STEPPER_MOTOR_SPEED_RPM 2000
 
 // Since microstepping is set externally, make sure this matches the selected mode
 // If it doesn't, the motor will move at a different RPM than chosen
 // 1=full step, 2=half step etc.
-#define MOTOR_MICROSTEPS 1
+#define STEPPER_MOTOR_MICROSTEPS 1
 
 // All the wires needed for full functionality
-#define MOTOR_DIR_PIN 2
-#define MOTOR_STEP_PIN 5
-#define MOTOR_EN_PIN 8
+#define STEPPER_MOTOR_DIR_PIN 2
+#define STEPPER_MOTOR_STEP_PIN 5
+#define STEPPER_MOTOR_EN_PIN 8
 
+
+// All the wires needed for full functionality
+#define DC_MOTOR_DIR_PIN 3
+#define DC_MOTOR_PWM_PIN 6
 enum status_et
 {
     DISCONNECTED,
@@ -50,6 +54,12 @@ enum status_et
     SENDING_DATA,
     READING_DATA,
     WRITING_DATA
+};
+
+enum direction_et
+{
+    CLOCKWISE = 0,
+    COUNTER_CLOCKWISE = 1
 };
 
 

@@ -8,11 +8,14 @@
  * Modify this file to quickly configure AirSENSE Project,
  */
 
-#ifndef CONFIGS_H
-#define CONFIGS_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <Arduino.h>
+#include "common.h"
+
+
 #include "stepperDriver.h"
+#include "hi216Driver.h"
 
-
-#endif // CONFIGS_H
+#endif // MAIN_H
